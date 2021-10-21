@@ -6,10 +6,10 @@ const element = document.getElementById('price');
 
 if (age < 18) {
     const calculateDiscount = price - (price * 20 / 100);
-    element.innerHTML = `Il prezzo del biglietto è: ${calculateDiscount}`;
+    element.innerHTML = `Il prezzo del biglietto è: ${calculateDiscount.toFixed(2) + "€"}`;
 } else if (age > 65) {
     const calculateDiscount = price - (price * 40 / 100);
-    element.innerHTML = `Il prezzo del biglietto è: ${calculateDiscount}`;
+    element.innerHTML = `Il prezzo del biglietto è: ${calculateDiscount.toFixed(2) + "€"}`;
 } else {
-    element.innerHTML = `Il prezzo del biglietto è: ${price}`;
+    element.innerHTML = `Il prezzo del biglietto è: ${price.toFixed(2) + "€"}`;
 }
