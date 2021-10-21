@@ -1,27 +1,15 @@
-let km = prompt ("Quanti Km devi percorrere?");
-
-let age = prompt ("Quanti anni hai?");
-
-const priceKm = ("0.21");
-
-const euro = ("\u20AC");
-
-let price = km * priceKm + euro;
+let km = prompt("Quanti Km devi percorrere?");
+let age = prompt("Quanti anni hai?");
+const priceKm = 0.21;
+let price = km * priceKm;
+const element = document.getElementById('price');
 
 if (age < 18) {
-    const calculateDiscount = ((price) * (20) / (100));
+    const calculateDiscount = price - (price * 20 / 100);
+    element.innerHTML = `Il prezzo del biglietto è: ${calculateDiscount}`;
 } else if (age > 65) {
-    const calculateDiscount = ((price) * (40) / (100));
+    const calculateDiscount = price - (price * 40 / 100);
+    element.innerHTML = `Il prezzo del biglietto è: ${calculateDiscount}`;
 } else {
-    const calculateDiscount = (price);
+    element.innerHTML = `Il prezzo del biglietto è: ${price}`;
 }
-
-if (age < 18) {
-    document.getElementById("price").innerHTML = `Il prezzo del biglietto è: ${price} + ${calculateDiscount}`;
-} else if (age > 65) {
-    document.getElementById("price").innerHTML = `Il prezzo del biglietto è: ${price} + ${calculateDiscount}`;
-} else {
-    document.getElementById("price").innerHTML = `Il prezzo del biglietto è: ${price}`;
-}
-
-// document.getElementById("price").innerHTML = `Il prezzo del biglietto è: ${price} + ${calculateDiscount}`;
