@@ -17,11 +17,11 @@ if (age < 18) {
 }
 
 if (age < 18) {
-    getElementById("price").innerHTML = `Il prezzo del biglietto è: ${price} + ${calculateDiscount}`;
+    document.getElementById("price").innerHTML = `Il prezzo del biglietto è: ${price} + ${calculateDiscount}`;
 } else if (age > 65) {
-    getElementById("price").innerHTML = `Il prezzo del biglietto è: ${price} + ${calculateDiscount}`;
+    document.getElementById("price").innerHTML = `Il prezzo del biglietto è: ${price} + ${calculateDiscount}`;
 } else {
-    getElementById("price").innerHTML = `Il prezzo del biglietto è: ${price}`;
+    document.getElementById("price").innerHTML = `Il prezzo del biglietto è: ${price}`;
 }
 
 // document.getElementById("price").innerHTML = `Il prezzo del biglietto è: ${price} + ${calculateDiscount}`;
